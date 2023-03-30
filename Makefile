@@ -1,5 +1,6 @@
-run: build
-	@cabal run
+run: compile
+	@echo "Running $(A) tests..."
+	@cabal run agda2hsUserStudy -- $(A)
 
 build: compile
 	@echo "Building the Haskell project..."
@@ -8,8 +9,8 @@ build: compile
 
 compile: clean
 	@echo "Generating Haskell library with Agda2HS..."
-	@agda2hs lib/Lib.agda -o src
-	@rm src/Lib.hs
+	@chmod +x compile-agda.sh
+	@./compile-agda.sh
 	@echo ""
 
 clean:

@@ -13,4 +13,6 @@ propAddContainedStaysSame xs i =
 
 setTest :: IO ()
 setTest = do
+  putStrLn "Testing set..."
   quickCheck propAddContainedStaysSame
+  putStrLn ""

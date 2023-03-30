@@ -3,9 +3,14 @@ module Main where
 import Test.Reverse ( reverseTest )
 import Test.Set     ( setTest )
 
+import System.Environment
+
 main :: IO ()
 main = do
-  putStrLn "Testing reverse..."
-  reverseTest
-  putStrLn "\nTesting set..."
-  setTest
+  args <- getArgs
+  case args of
+    [] -> do
+      reverseTest
+      setTest
+    ("reverse":_) -> reverseTest
+    ("set":_) -> setTest

@@ -34,18 +34,11 @@ involution (x ∷ xs) =
     (x ∷ []) ++ reverse (reverse xs)
   ≡⟨⟩ 
     x ∷ reverse (reverse xs)
-  ≡⟨ cong (x ∷_) (involution xs) ⟩ 
+  ≡⟨ cong (x ∷_) (involution xs) ⟩ -- IH
     (x ∷ []) ++ xs
   ≡⟨⟩ 
     x ∷ xs
-  ∎ 
-
-involution' : ∀ (xs : List a) → reverse (reverse xs) ≡ xs
-involution' [] = refl
-involution' (x ∷ xs)
-  rewrite reverseAppend (reverse xs) (x ∷ [])
-    | involution xs
-  = refl
+  ∎
 
 emptyIsEmpty : ∀ (xs : List a) → { xs ≡ [] } → reverse xs ≡ xs
 emptyIsEmpty [] = refl

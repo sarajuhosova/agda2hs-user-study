@@ -20,7 +20,9 @@ propReverseAppend xs ys = R.reverse (xs ++ ys) == R.reverse ys ++ R.reverse xs
 
 reverseTest :: IO ()
 reverseTest = do
+  putStrLn "Testing reverse..."
   quickCheck propInvolution
   quickCheck propEmptyIsEmpty
   quickCheck propSingleIsSingle
   quickCheck propReverseAppend
+  putStrLn ""
