@@ -1,5 +1,5 @@
 run: compile
-	@echo "Running $(A) tests..."
+	@echo "Running tests for \"$(A)\" exercise..."
 	@cabal run agda2hsUserStudy -- $(A)
 
 build: compile

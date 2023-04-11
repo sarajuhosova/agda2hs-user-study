@@ -9,8 +9,6 @@ main :: IO ()
 main = do
   args <- getArgs
   case args of
-    [] -> do
-      reverseTest
-      allTest
+    [] -> putStrLn "Please specify which tests you would like to run: reverse, all"
     ("reverse":_) -> reverseTest
     ("all":_) -> allTest
