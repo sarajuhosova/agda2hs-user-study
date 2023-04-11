@@ -20,19 +20,16 @@ Include the following guarantees in your Agda code:
 
 To run the tests for this assignment, run `make A=reverse`.
 
-## Exercise 1: (Ordered) Set
+## Exercise 1: The `All` Type
 
-**Task:** Implement an (ordered) set data structure. An (ordered) set contains each element *at most once*, and the order of the elements *matters* (this means that `{1, 2}` and `{2, 1}` are **not** equal sets). Implement the following methods for this new data structure:
+**Task:** Implement the [Haskell `All` type](https://hackage.haskell.org/package/base-4.18.0.0/docs/Data-Monoid.html#t:All) - the boolean monoid under conjunction.
 
-* `add :: Eq a => a -> OrderedSet a -> OrderedSet a`: this method adds an element to the set (if it was not already present)
-* `fromList :: Eq a => [a] -> OrderedSet a`: this method takes a list and puts all the elements from it into an ordered set
+1. Define the `All` type.
+2. Create an instance for `Eq`, `Ord`, `Show`, and `Bounded`.
+3. Create an instance for `Semigroup`
+4. Prove that the `Semigroup` instance is lawful.
+4. Create an instance for `Monoid`.
+5. Create an instance for `Read`.
+6. Create an instance for `Generic`.
 
-Feel free to define any other helper methods, use intrinsic verification, or use anything else that seems like a good approach.
-
-*Note:* Make sure you implement the `Eq` instance for your `OrderedSet`.
-
-Include the following guarantees in your Agda code:
-
-1. If you try to add an element which is already present in the set, the set doesn't change.
-
-To run the tests for this assignment, run `make A=set`.
+To run the tests for this assignment, run `make A=all`.

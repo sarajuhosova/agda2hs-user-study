@@ -1,5 +1,7 @@
 #!/bin/bash
 
+cp -r ./default/. ./src
+
 A_FILES="./lib/*.agda"
 for f in $A_FILES; do agda2hs $f -o src; done
 

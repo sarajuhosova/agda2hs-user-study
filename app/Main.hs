@@ -1,7 +1,7 @@
 module Main where
 
 import Test.Reverse ( reverseTest )
-import Test.Set     ( setTest )
+import Test.All     ( allTest )
 
 import System.Environment
 
@@ -11,6 +11,6 @@ main = do
   case args of
     [] -> do
       reverseTest
-      setTest
+      allTest
     ("reverse":_) -> reverseTest
-    ("set":_) -> setTest
+    ("all":_) -> allTest
