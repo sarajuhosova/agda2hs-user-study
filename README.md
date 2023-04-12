@@ -33,3 +33,14 @@ To run the tests for this assignment, run `make A=reverse`.
 6. Create an instance for `Generic`.
 
 To run the tests for this assignment, run `make A=all`.
+
+## Exercise 2: Safe `lookup`
+
+**Task:** Implement a `lookupSafe` function, which looks up a value in a list of key-value pairs.
+The compiled Haskell signature of this method should be `lookupSafe :: Eq a => a -> [(a, b)] -> b`.
+
+Include the following guarantees in your Agda code:
+
+1. A `lookupSafe` can only happen if the list contains the key.
+
+You can use the `contains` and `containsTail` definitions in the `Help.Contains` module.
