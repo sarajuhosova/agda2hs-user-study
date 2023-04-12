@@ -15,8 +15,7 @@ compile: clean
 
 clean:
 	@echo "Cleaning the generated files..."
-	@rm -r src
-	@mkdir src
+	@rm -rf src
 	@echo ""
 
 install :

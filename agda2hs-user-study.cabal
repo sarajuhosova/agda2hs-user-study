@@ -31,6 +31,7 @@ library
   exposed-modules:
     Reverse
     All
+    Lookup
 
 executable agda2hsUserStudy
   import: shared-properties
@@ -40,6 +41,7 @@ executable agda2hsUserStudy
   other-modules:
     Test.Reverse
     Test.All
+    Test.Lookup
   
   -- LANGUAGE extensions used by modules in this package.
   -- other-extensions:

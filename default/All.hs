@@ -1,3 +1,5 @@
+-- this is a default file
+
 {-# LANGUAGE DeriveGeneric #-}
 
 module All where
