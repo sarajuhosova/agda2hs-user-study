@@ -8,9 +8,9 @@ The project has the following structure:
 * `lib`: The directory which contains the Agda solution files.
 * `lib/Help`: A directory containing helper methods for the exercises.
 * `src`: A git-ignored directory into which Agda2HS generates the Haskell code. 
-* `default`: A helper directory which contains Haskell implementations of all the exercises. They are used to make the Haskell code while the exercise hasn't been implemented yet. They _can_ be used as guides, but feel free to ignore them and implement them in Agda in any way you like.
+* `default`: A helper directory for this particular project setup which contains parital Haskell implementations of all the exercises. They are used to make the Haskell code while the exercise hasn't been implemented yet. The are **not** meant to serve as inspiration.
 
-_The only directory you are supposed to edit is `lib` (excluding `lib/Help`)._
+*The only directory you are supposed to edit is `lib` (excluding `lib/Help`).*
 
 ### How to Use this Project
 
