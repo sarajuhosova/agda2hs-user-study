@@ -2,7 +2,38 @@
 
 This repository contains the project that will be used for the Agda2HS user study.
 
+The project has the following structure:
+
+* `app`: the directory containing the executable Haskell app. It runs the QuickCheck test.
+* `lib`: The directory which contains the Agda solution files.
+* `lib/Help`: A directory containing helper methods for the exercises.
+* `src`: A git-ignored directory into which Agda2HS generates the Haskell code. 
+* `default`: A helper directory which contains Haskell implementations of all the exercises. They are used to make the Haskell code while the exercise hasn't been implemented yet. They _can_ be used as guides, but feel free to ignore them and implement them in Agda in any way you like.
+
+_The only directory you are supposed to edit is `lib` (excluding `lib/Help`)._
+
+### How to Use this Project
+
+To create a solution for the exercise, do the following:
+
+1. Create a file in the `lib` directory with the indicated filename.
+2. Add the following into your newly created file:
+
+```agda
+module <module_name> where
+
+open import Haskell.Prelude
+```
+
+3. Compile the file using `Ctrl + c, Ctrl + l`.
+4. Start implementing.
+5. To run the exercise, run `make A=<exercise_tag>`.
+
 ## Example: Reverse
+
+File name: `Reverse.agda`
+Module name: `Reverse`
+Exercise tag: `reverse`
 
 **Task:** Implement a `reverse` function, which takes a list and reverses it.
 
@@ -22,6 +53,10 @@ To run the tests for this assignment, run `make A=reverse`.
 
 ## Exercise 1: The `All` Type
 
+File name: `All.agda`
+Module name: `All`
+Exercise tag: `all`
+
 **Task:** Implement the [Haskell `All` type](https://hackage.haskell.org/package/base-4.18.0.0/docs/Data-Monoid.html#t:All) - the boolean monoid under conjunction.
 
 1. Define the `All` type.
@@ -35,6 +70,10 @@ To run the tests for this assignment, run `make A=reverse`.
 To run the tests for this assignment, run `make A=all`.
 
 ## Exercise 2: Safe `lookup`
+
+File name: `Lookup.agda`
+Module name: `Lookup`
+Exercise tag: `lookup`
 
 **Task:** Implement a `lookupSafe` function, which looks up a value in a list of key-value pairs.
 The compiled Haskell signature of this method should be `lookupSafe :: Eq a => a -> [(a, b)] -> b`.
