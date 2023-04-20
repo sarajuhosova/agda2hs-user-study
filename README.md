@@ -25,7 +25,7 @@ module <module_name> where
 open import Haskell.Prelude
 ```
 
-3. Compile the file using `Ctrl + c, Ctrl + l`.
+3. Type-check the file using `Ctrl + c, Ctrl + l`.
 4. Start implementing.
 5. To run the exercise, run `make A=<exercise_tag>`.
 
@@ -61,11 +61,11 @@ Exercise tag: `all`
 
 1. Define the `All` type.
 2. Create an instance for `Eq`, `Ord`, `Show`, and `Bounded`.
-3. Create an instance for `Semigroup`
-4. Prove that the `Semigroup` instance is lawful.
+3. Create an instance for `Semigroup`.
+4. Prove that the `Semigroup` instance is lawful (you can see which laws should hold in the [Haskell documentation](https://hackage.haskell.org/package/base-4.18.0.0/docs/Data-Semigroup.html)).
 4. Create an instance for `Monoid`.
-5. Create an instance for `Read`.
-6. Create an instance for `Generic`.
+5. (Optional) Create an instance for `Read`.
+6. (Optional) Create an instance for `Generic`.
 
 To run the tests for this assignment, run `make A=all`.
 
@@ -86,6 +86,6 @@ Include the following guarantees in your Agda code:
 
 1. A `lookupSafe` can only happen if the list contains the key.
 
-You can use the `contains` and `containsTail` definitions in the `Help.Contains` module.
+Use the `contains` and `containsTail` definitions in the `Help.Contains` module.
 
 To run the tests for this assignment, run `make A=lookup`.

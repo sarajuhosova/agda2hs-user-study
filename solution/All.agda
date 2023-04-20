@@ -11,22 +11,14 @@ record All : Set where
     getAll : Bool
 open All public
 
-{-# COMPILE AGDA2HS All newtype #-}
-
-record Read (a : Set) : Set where
-open Read ⦃...⦄ public
-
-record Generic (a : Set) : Set where
-open Generic ⦃...⦄ public
+{-# COMPILE AGDA2HS All newtype deriving ( Read,  Generic ) #-}
 
 instance
   postulate
     iAllEq      : Eq      All
     iAllOrd     : Ord     All
-    iAllRead    : Read    All
     iAllShow    : Show    All
     iAllBounded : Bounded All
-    iAllGeneric : Generic All
 
   iAllSemigroup : Semigroup All
   iAllSemigroup ._<>_ a b = record { getAll = (getAll a && getAll b) }
@@ -46,10 +38,8 @@ instance
 
 {-# COMPILE AGDA2HS iAllEq #-}
 {-# COMPILE AGDA2HS iAllOrd #-}
-{-# COMPILE AGDA2HS iAllRead #-}
 {-# COMPILE AGDA2HS iAllShow #-}
 {-# COMPILE AGDA2HS iAllBounded #-}
-{-# COMPILE AGDA2HS iAllGeneric #-}
 
 {-# COMPILE AGDA2HS iAllSemigroup #-}
 {-# COMPILE AGDA2HS iAllMonoid #-}
