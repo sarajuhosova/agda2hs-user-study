@@ -60,12 +60,12 @@ Exercise tag: `all`
 **Task:** Implement the [Haskell `All` type](https://hackage.haskell.org/package/base-4.18.0.0/docs/Data-Monoid.html#t:All) - the boolean monoid under conjunction.
 
 1. Define the `All` type.
-2. Create an instance for `Eq`, `Ord`, `Show`, and `Bounded`.
-3. Create an instance for `Semigroup`.
+2. Create an instance for `Eq`, `Ord`, `Show`, and `Bounded`. These should all be available on the Agda side.
+3. Create an instance for `Semigroup` that is available on the Agda side.
 4. Prove that the `Semigroup` instance is lawful (you can see which laws should hold in the [Haskell documentation](https://hackage.haskell.org/package/base-4.18.0.0/docs/Data-Semigroup.html)).
-4. Create an instance for `Monoid`.
-5. (Optional) Create an instance for `Read`.
-6. (Optional) Create an instance for `Generic`.
+5. Create an instance for `Monoid` that is available on the Agda side.
+6. (Optional) Create an instance for `Read`. This instance does not need to be available on the Agda side.
+7. (Optional) Create an instance for `Generic`. This instance does not need to be available on the Agda side.
 
 To run the tests for this assignment, run `make A=all`.
 
